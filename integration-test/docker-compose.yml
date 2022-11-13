@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  simple-blog:
+    build:
+      context: ..
+      dockerfile: integration-test/Dockerfile
+    environment:
+      MONGODB_URI: "mongodb://mongo:27017/"
+      CGO_ENABLED: 0
+  mongo:
+    image: "mongo:6.0"

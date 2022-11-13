@@ -1,0 +1,11 @@
+version: "3.9"
+services:
+  simple-blog:
+    build: .
+    environment:
+      MONGODB_URI: "mongodb://mongo:27017/"
+    ports:
+      - "8080:8080"
+    expose: [8080]
+  mongo:
+    image: "mongo:6.0"
